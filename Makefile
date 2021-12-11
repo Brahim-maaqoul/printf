@@ -6,12 +6,13 @@
 #    By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/06 14:15:13 by bmaaqoul          #+#    #+#              #
-#    Updated: 2021/12/08 11:30:47 by bmaaqoul         ###   ########.fr        #
+#    Updated: 2021/12/11 12:08:10 by bmaaqoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = gcc
+HDR = ft_printf.h
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rc
 HDR = ft_printf.h
@@ -22,7 +23,7 @@ OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HDR)
 	$(AR) $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS) $(HDR)
